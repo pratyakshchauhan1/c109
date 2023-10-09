@@ -46,9 +46,12 @@ while True:
              #checking if all fingers are folded
             if all(finger_fold_status):
                 
-                # WRITE THE CODE HERE   
-
-
+                image = pyautogui.screenshot()
+                image = cv2.cvtColor(np.array(image),cv2.COLOR_RGB2BGR)  
+                cv2.imwrite("siu.png",image)
+                pyautogui.screenshot("wewew.png")
+                image=cv2.imread("wewew.png")
+                cv2.imshow("screenshot",imutils.resize(image,width=600))
 
 
 
